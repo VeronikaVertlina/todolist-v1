@@ -7,24 +7,38 @@
   </head>
   <body>
 
-    <h1><%= kindOfDay %></h1>
+    <div class="box" id="heading">
+      <h1><%= kindOfDay %></h1>
+    </div>
 
-    <ul>
+    <div class="box">
+      <% for(let i = 0; i <= newListItems.length; i++){ %>
+          <div class="item">
+            <input type="checkbox">
+            <p><%= newListItems[i] %></p>
+          </div>
+      <% } %>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="button">+</button>
+      </form>
+    </div>
+
+
+
+    <!-- <ul>
       <!-- <li>Buy Food</li>
       <li>Cook Food</li>
       <li>Eat Food</li>
       <li><%= newListItems %></li> -->
-
-      <% for(var i = 0; i <= newListItems.length; i++){ %>
+      <!-- <% for(var i = 0; i <= newListItems.length; i++){ %>
         <li><%= newListItems[i] %></li>
-      <% } %>
+      <% } %> -->
 
-    </ul>
+    <!--</ul> -->
 
-    <form class="" action="/" method="post">
-      <input type="text" name="newItem">
-      <button type="submit" name="button">Add</button>
-    </form>
+
 
     <!-- <% if (kindOfDay === "Saturday" || kindOfDay === "Sunday"){ %>
       <h1 style="color: purple">It's a <%= kindOfDay %> ToDo List!</h1>
