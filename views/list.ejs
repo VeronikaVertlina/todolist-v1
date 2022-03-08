@@ -5,18 +5,18 @@
     <title>To Do List</title>
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
 
+  <body>
     <div class="box" id="heading">
       <h1><%= kindOfDay %></h1>
     </div>
 
     <div class="box">
-      <% for(let i = 0; i <= newListItems.length; i++){ %>
-          <div class="item">
-            <input type="checkbox">
-            <p><%= newListItems[i] %></p>
-          </div>
+      <% for(let i = 0; i < newListItems.length; i++){ %>
+      <div class="item">
+        <input type="checkbox" checked="checked">
+        <p><%= newListItems[i] %></p>
+      </div>
       <% } %>
 
       <form class="item" action="/" method="post">
@@ -28,23 +28,25 @@
 
 
     <!-- <ul>
-      <!-- <li>Buy Food</li>
-      <li>Cook Food</li>
-      <li>Eat Food</li>
-      <li><%= newListItems %></li> -->
-      <!-- <% for(var i = 0; i <= newListItems.length; i++){ %>
-        <li><%= newListItems[i] %></li>
-      <% } %> -->
+        <!-- <li>Buy Food</li>
+        <li>Cook Food</li>
+        <li>Eat Food</li>
+        <li><%= newListItems %></li> -->
+    <!-- <% for(var i = 0; i <= newListItems.length; i++){ %>
+          <li><%= newListItems[i] %></li>
+        <% } %> -->
 
     <!--</ul> -->
 
 
 
     <!-- <% if (kindOfDay === "Saturday" || kindOfDay === "Sunday"){ %>
-      <h1 style="color: purple">It's a <%= kindOfDay %> ToDo List!</h1>
-    <% }else { %>
-      <h1 style="color: blue">It's a <%= kindOfDay %> ToDo List!</h1>
-    <% } %> -->
+        <h1 style="color: purple">It's a <%= kindOfDay %> ToDo List!</h1>
+      <% }else { %>
+        <h1 style="color: blue">It's a <%= kindOfDay %> ToDo List!</h1>
+      <% } %> -->
 
-    </body>
+  </body>
+
+  <footer>2022 Veronika Vertlina</footer>
 </html>
